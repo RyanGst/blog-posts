@@ -1,0 +1,9 @@
+{
+  "name": "semana-omni-stack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "expo-cli": "^3.6.0"
+  }
+}
