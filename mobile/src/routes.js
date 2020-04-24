@@ -2,7 +2,7 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp'
 import List from './pages/List';
-import Book from './pages/Book';
+import Post from './pages/Post';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 
 const AuthStack = createSwitchNavigator({
@@ -10,7 +10,7 @@ const AuthStack = createSwitchNavigator({
 })
 
 const Home = createSwitchNavigator({
-    List, Book
+    List, Post
 })
 
 const Drawer = createDrawerNavigator({

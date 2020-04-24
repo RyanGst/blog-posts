@@ -37,12 +37,11 @@ class PostsRepository {
     return this.model.findByIdAndRemove(_id);
   }
 
-  async all(query) {
-    const { tech } = query;
+  async get(query) {
+    console.log(query)
+    const posts = await this.model.find({});
 
-    const spots = await this.model.find({});
-
-    return spots;
+    return posts;
   }
 }
 

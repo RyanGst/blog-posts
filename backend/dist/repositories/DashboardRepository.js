@@ -15,7 +15,7 @@ class DashboardRepository {
     constructor() {
         this.model = mongoose.model('Post', PostsSchema_1.default);
     }
-    show(user) {
+    show() {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield this.model.find({});
             return response;

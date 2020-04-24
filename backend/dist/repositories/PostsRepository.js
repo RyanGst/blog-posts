@@ -43,11 +43,11 @@ class PostsRepository {
     delete(_id) {
         return this.model.findByIdAndRemove(_id);
     }
-    all(query) {
+    get(query) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { tech } = query;
-            const spots = yield this.model.find({});
-            return spots;
+            console.log(query);
+            const posts = yield this.model.find({});
+            return posts;
         });
     }
 }

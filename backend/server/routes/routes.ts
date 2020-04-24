@@ -21,8 +21,8 @@ export class Routes {
         app.route("/login")
             .post(SessionController.login)
 
-        app.get("/dashboard", DashboardController.get)
-        app.post("/spots", uploads.single('thumbnail'), PostsController.create)
-        app.get("/spots", PostsController.index)
+        app.get("/dashboard", DashboardController.index)
+        app.post("/posts", uploads.single('thumbnail'), PostsController.create)
+        app.get("/posts ", PostsController.get)
     }
 }

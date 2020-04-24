@@ -9,14 +9,14 @@ function PostsList({ tech, navigation }) {
 
     useEffect(() => {
         async function loadSpots() {
-            const response = await api.get('/spots')
-            setSpots(response.data.result);
+            const response = await api.get('/dashboard')
+            setSpots(response.data);
         }
         loadSpots();
     }, []);
 
     function handleNavigate(id) {
-        navigation.navigate('Book', { id });
+        navigation.navigate('Post', { id });
     }
 
     return (

@@ -11,7 +11,7 @@ export default function Login({ history }) {
     const response = await api.post("/login", inputs);
 
     console.log(response);
-    
+
     const { token } = response.data;
     const { user } = response.data;
 
@@ -23,18 +23,18 @@ export default function Login({ history }) {
     }
   }
 
-  const handleInputChange = event => {
+  const handleInputChange = (event) => {
     event.persist();
-    setInputs(inputs => ({ ...inputs, [event.target.id]: event.target.value }));
+    setInputs((inputs) => ({
+      ...inputs,
+      [event.target.id]: event.target.value,
+    }));
   };
 
   return (
     <>
       <p>
         Entre com seu <strong>email</strong> e <strong>senha</strong>.
-      </p>
-      <p>
-        Ainda não está cadastrado? clique <Link to="/register">aqui</Link>.
       </p>
       <form onSubmit={handleSubmit}>
         <label htmlFor="email">Email</label>
@@ -45,7 +45,6 @@ export default function Login({ history }) {
           onChange={handleInputChange}
         />
         <label htmlFor="password">Senha</label>
-
         <input
           type="password"
           id="password"
@@ -55,6 +54,10 @@ export default function Login({ history }) {
         <button className="btn" type="submit">
           Entrar
         </button>
+        <br />
+        <p>
+          Ainda não está cadastrado? clique <Link to="/register">aqui</Link>.
+        </p>
       </form>
     </>
   );

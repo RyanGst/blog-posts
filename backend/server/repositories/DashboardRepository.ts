@@ -2,13 +2,9 @@ import * as mongoose from 'mongoose';
 import PostSchema from '../schemas/PostsSchema';
 
 class DashboardRepository {
-    private model;
+    private model = mongoose.model('Post', PostSchema);
 
-    constructor() {
-        this.model = mongoose.model('Post', PostSchema);
-    }
-
-    async show(user: object) {
+    async show() {
 
         const response = await this.model.find({});
 

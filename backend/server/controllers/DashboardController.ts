@@ -7,9 +7,9 @@ const sendReponse = function (res, statusCode, data) {
 }
 
 class DashboardController {
-    get(req, res) {
+    index(req, res) {
         DashboardRepository
-            .show(req.headers)
+            .show()
             .then(response => sendReponse(res, httpStatus.OK, response))
             .catch(err => console.error.bind(console, `Error ${err}`))
     }

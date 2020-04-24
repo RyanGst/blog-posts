@@ -15,9 +15,9 @@ class Routes {
             .post(SessionController_1.default.create);
         app.route("/login")
             .post(SessionController_1.default.login);
-        app.get("/dashboard", DashboardController_1.default.get);
-        app.post("/spots", uploads_1.default.single('thumbnail'), PostsController_1.default.create);
-        app.get("/spots", PostsController_1.default.index);
+        app.get("/dashboard", DashboardController_1.default.index);
+        app.post("/posts", uploads_1.default.single('thumbnail'), PostsController_1.default.create);
+        app.get("/posts ", PostsController_1.default.get);
     }
 }
 exports.Routes = Routes;

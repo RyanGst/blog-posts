@@ -11,4 +11,4 @@ export const port = process.env.PORT
 
 export const db = process.env.DB
 
-export const ip = '10.0.0.109';
+export const ip = process.env.IP || '10.0.0.39';

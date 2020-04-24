@@ -6,9 +6,9 @@ const sendReponse = function (res, statusCode, data) {
     res.status(statusCode).json(data);
 };
 class DashboardController {
-    get(req, res) {
+    index(req, res) {
         DashboardRepository_1.default
-            .show(req.headers)
+            .show()
             .then(response => sendReponse(res, httpStatus.OK, response))
             .catch(err => console.error.bind(console, `Error ${err}`));
     }
