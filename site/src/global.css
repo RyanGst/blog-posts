@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700|Roboto:400,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  transition: 0.4s;
+}
+
+body {
+  font: 400 14px Roboto, sans-serif;
+  background: #333333;
+  display: flex;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  background: #daa520;
+  border-radius: 4px;
+  color: #ffffff;
+  border: none;
+  padding: 8px;
+}
+
+h1 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: 0.25em;
+  color: #fff;
+}

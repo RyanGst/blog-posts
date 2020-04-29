@@ -27,6 +27,8 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
+    boxShadow: "none", 
+    color: "#FFF"
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -92,6 +94,7 @@ export default function Sidebar(props) {
     <div>
       <CssBaseline />
       <AppBar
+        color="transparent"
         position="fixed"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
