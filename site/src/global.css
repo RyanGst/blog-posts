@@ -5,6 +5,7 @@
   outline: 0;
   box-sizing: border-box;
   transition: 0.4s;
+  max-width: 100%;
 }
 
 body {
@@ -15,14 +16,38 @@ body {
 }
 
 button {
+  width: 175px;
+  height: 50px;
   background: #daa520;
   border-radius: 4px;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
   color: #ffffff;
   border: none;
-  padding: 8px;
 }
 
 h1 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 98px;
+  color: #ffffff;
+}
+
+h2 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 49px;
+  color: #ffffff;
+}
+
+h3 {
   font-family: Nunito;
   font-style: normal;
   font-weight: bold;

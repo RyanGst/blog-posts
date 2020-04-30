@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 
-import Logo from "../assets/logo.svg";
+import Logo from "../../assets/logo.svg";
 
 import "./styles.css";
 
@@ -14,14 +14,14 @@ export default function Header() {
               <img alt="logo" src={Logo} />
             </a>
             <div className="logo-text">
-              <h1>Dr. Felipe Batistela</h1>
+              <h3>Dr. Felipe Batistela</h3>
             </div>
           </div>
           <div className="header-right">
             <a href="/">Home</a>
             <a href="/">Quem nós somos?</a>
             <a href="/">Vídeos</a>
-            <a>Entrar</a>
+            <a href="/">Entrar</a>
           </div>
         </div>
       </nav>
