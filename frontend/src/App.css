@@ -27,6 +27,11 @@ textarea {
   font-size: 14px;
 }
 
+a, i {
+  text-decoration: none;
+  color: #fff;
+}
+
 .container {
   margin: 80px auto 0;
   max-width: 650px;
@@ -38,7 +43,7 @@ textarea {
 
 .content {
   width: 100%;
-  background: #fff;
+  background: #3a3a3a;
   margin-top: 50px;
   border-radius: 4px;
   padding: 30px;
@@ -57,14 +62,14 @@ textarea {
 
 .content form label {
   font-size: 14px;
-  color: #444;
+  color: #fff;
   font-weight: bold;
   margin-bottom: 8px;
 }
 
 .content form label span {
   font-weight: normal;
-  color: #999;
+  color: #fff;
   font-size: 12px;
 }
 

@@ -1,8 +1,7 @@
 import React from "react";
-
-import { routes } from "../routes/links";
-
 import clsx from "clsx";
+import { Link } from "react-router-dom";
+
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -18,7 +17,7 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import { Link } from "react-router-dom";
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -27,8 +26,9 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    boxShadow: "none", 
-    color: "#FFF"
+    boxShadow: "none",
+    color: "#FFF",
+    background: "#3a3a3a",
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -47,9 +47,12 @@ const useStyles = makeStyles((theme) => ({
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
+    color: "#FFF",
   },
   drawerPaper: {
     width: drawerWidth,
+    color: "#FFF",
+    background: "#3a3a3a",
   },
   drawerHeader: {
     display: "flex",
@@ -113,6 +116,7 @@ export default function Sidebar(props) {
           <Typography variant="h6" noWrap>
             Na contra mão da depressão
           </Typography>
+          
         </Toolbar>
       </AppBar>
       <Drawer
@@ -133,9 +137,9 @@ export default function Sidebar(props) {
           </IconButton>
         </div>
         <Divider />
-        <List>
-          {routes.map((text) => (
-            <Link to={text.path}>
+        <List className="route-list">
+          {props.routes.map((text) => (
+            <Link key={text.routeName} to={text.path}>
               <ListItem button key={text}>
                 <ListItemIcon>
                   <i className={text.icon} />
